@@ -16,10 +16,10 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (GameRunning == true)
-        {
+        //if (GameRunning == true)
+        //{
             StartCoroutine(SpawnSphere());
-        }
+       //}
     }
 
     // Update is called once per frame

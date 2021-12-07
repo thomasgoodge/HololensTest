@@ -17,7 +17,7 @@ public class HazardSpawner : MonoBehaviour
     private bool hazardOneSpawned;
     private bool hazardTwoSpawned;
     private bool hazardThreeSpawned;
-    public bool GameRunning = false;
+    //public bool GameRunning = false;
 
     //Initialise Onsets and Offsets - Has to be set in the Unity Editor - High values are to stop CheckSpawn() comparing to 0
     [SerializeField] private float hazardOneOnset = 1000000f;
@@ -37,7 +37,7 @@ public class HazardSpawner : MonoBehaviour
         hazardOneSpawned = false;
         hazardTwoSpawned = false;
         hazardThreeSpawned = false;
-        GameRunning = true;
+        //GameRunning = true;
 
         //Define Onsets and Offsets here
         /* hazardOneOnset = **;
@@ -55,12 +55,12 @@ public class HazardSpawner : MonoBehaviour
     void Update()
     {
         // Reset the respawn time to a random number within range ( smaller range for hazard spheres to increase spawn rate)
-        if (GameRunning == true)
-        {
+       // if (GameRunning == true)
+        //{
             timeKeeper += Time.deltaTime;
             CheckSpawn();
             CheckHazard();
-        }
+        //}
     }
 
     public void CheckHazard()
