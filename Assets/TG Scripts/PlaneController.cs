@@ -11,8 +11,8 @@ public class PlaneController : MonoBehaviour
     //How to add key bindings for controller
     [SerializeField] InputAction movement;
     [SerializeField] float controlSpeed = 0.8f;
-    [SerializeField] float xRange = 1.5f;
-    [SerializeField] float yRange = 1.5f;
+    [SerializeField] float xRange = 0.4f;
+    [SerializeField] float yRange = 0.3f;
     
 
     [SerializeField] float positionPitchFactor = 0f;

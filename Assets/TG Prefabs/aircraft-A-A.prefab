@@ -300,9 +300,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1773235876891905569}
   - component: {fileID: 1860011288055238127}
-  - component: {fileID: 1860011288055238125}
-  - component: {fileID: 1860011288055238124}
-  - component: {fileID: 1860011288055238099}
   - component: {fileID: 1860011288055238098}
   - component: {fileID: 7413009991263268567}
   - component: {fileID: 1442703854649389234}
@@ -351,88 +348,17 @@ MonoBehaviour:
     m_Name: Movement
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: a55274ab-99b6-4ef6-b934-66617df3d939
+    m_Id: 240afa3c-3d3c-470f-be7f-656442aab5f7
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
-  controlSpeed: 5
-  xRange: 0.35
-  yRange: 0.2
+  controlSpeed: 0.8
+  xRange: 0.4
+  yRange: 0.3
   positionPitchFactor: 0
-  controlPitchFactor: -30
-  positionYawFactor: 30
-  controlRollFactor: -20
---- !u!114 &1860011288055238125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6513306124745767581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hostTransform: {fileID: 1773235876891905569}
-  manipulationType: 3
-  twoHandedManipulationType: 7
-  allowFarManipulation: 1
-  useForcesForNearManipulation: 0
-  oneHandRotationModeNear: 1
-  oneHandRotationModeFar: 1
-  releaseBehavior: 3
-  transformSmoothingLogicType:
-    reference: Microsoft.MixedReality.Toolkit.Utilities.DefaultTransformSmoothingLogic,
-      Microsoft.MixedReality.Toolkit.SDK
-  smoothingFar: 1
-  smoothingNear: 1
-  moveLerpTime: 0.001
-  rotateLerpTime: 0.001
-  scaleLerpTime: 0.001
-  enableConstraints: 1
-  constraintsManager: {fileID: 1860011288055238124}
-  elasticsManager: {fileID: 0}
-  onManipulationStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  onManipulationEnded:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  onHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1860011288055238124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6513306124745767581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a98de877dee5fc341b4eb59dfdab266c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConstraintSelection: 1
-  selectedConstraints: []
---- !u!114 &1860011288055238099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6513306124745767581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5afd5316c63705643b3daba5a6e923bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowTetherWhenManipulating: 0
-  IsBoundsHandles: 0
+  controlPitchFactor: -60
+  positionYawFactor: 60
+  controlRollFactor: -60
 --- !u!114 &1860011288055238098
 MonoBehaviour:
   m_ObjectHideFlags: 0
