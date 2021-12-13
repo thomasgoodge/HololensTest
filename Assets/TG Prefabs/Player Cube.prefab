@@ -14434,7 +14434,7 @@ GameObject:
   - component: {fileID: 9119048788222830903}
   - component: {fileID: 434734859240857133}
   m_Layer: 0
-  m_Name: Player Cube (1)
+  m_Name: Player Cube
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14731,7 +14731,6 @@ MonoBehaviour:
   Pop: {fileID: 8300000, guid: 896aa138c68f1024bab95c5dfd2bdeaa, type: 3}
   Blop: {fileID: 8300000, guid: c2c5886ca83d27a4f857814f98638bed, type: 3}
   Clink: {fileID: 8300000, guid: 9d4bbd061ff2a0148916d172082e273d, type: 3}
-  sphereType: 
   targetParticles: {fileID: 1537995728214279143}
   enemyParticles: {fileID: 5560996861163869074}
   hazardParticles: {fileID: 8040684826400586417}
