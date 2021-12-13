@@ -11,7 +11,6 @@ public class AdvanceScene : MonoBehaviour
        SceneManager.LoadScene(sceneIndex);
     }
 
-
 }
 
 

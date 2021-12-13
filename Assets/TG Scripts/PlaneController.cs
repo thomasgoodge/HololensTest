@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlaneController : MonoBehaviour
 {
@@ -9,15 +10,15 @@ public class PlaneController : MonoBehaviour
 
     //How to add key bindings for controller
     [SerializeField] InputAction movement;
-    [SerializeField] float controlSpeed = 5f;
+    [SerializeField] float controlSpeed = 0.8f;
     [SerializeField] float xRange = 1.5f;
     [SerializeField] float yRange = 1.5f;
     
 
     [SerializeField] float positionPitchFactor = 0f;
-    [SerializeField] float controlPitchFactor = -30f;
-    [SerializeField] float positionYawFactor = 30f;
-    [SerializeField] float controlRollFactor = -20f;
+    [SerializeField] float controlPitchFactor = -60f;
+    [SerializeField] float positionYawFactor = 60f;
+    [SerializeField] float controlRollFactor = -60f;
   
     
     
@@ -31,7 +32,7 @@ public class PlaneController : MonoBehaviour
 
         ProcessTranslation();
         ProcessRotation();
-
+        DebugCommands();
     }
     private void ProcessRotation()
     {
@@ -66,7 +67,31 @@ public class PlaneController : MonoBehaviour
     }
 
     
-    
+    void NextLevel()
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            int nextSceneIndex = currentSceneIndex + 1;
+            if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+            {
+                nextSceneIndex = 0;
+            }
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+    void PreviousLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex - 1;
+        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+        {
+            nextSceneIndex = 0;
+        }
+        SceneManager.LoadScene(nextSceneIndex);
+    }
+    void ReloadLevel()
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex);
+        }
     private void OnEnable()
     {
         movement.Enable();
@@ -75,6 +100,29 @@ public class PlaneController : MonoBehaviour
     private void OnDisable()
     {
         movement.Disable();
+    }
+
+      private void DebugCommands()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+        else if (Input.GetKey(KeyCode.R))
+        {
+            ReloadLevel();
+        }
+
+        else if (Input.GetKey(KeyCode.Period))
+        {
+            NextLevel();
+        }
+
+        else if (Input.GetKey(KeyCode.Comma))
+        {
+            PreviousLevel();
+        }
     }
 
 }

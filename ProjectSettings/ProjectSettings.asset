@@ -68,6 +68,12 @@ PlayerSettings:
   androidRenderOutsideSafeArea: 1
   androidUseSwappy: 1
   androidBlitType: 0
+  androidResizableWindow: 0
+  androidDefaultWindowWidth: 1920
+  androidDefaultWindowHeight: 1080
+  androidMinimumWindowWidth: 400
+  androidMinimumWindowHeight: 300
+  androidFullscreenMode: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
   runInBackground: 1
@@ -121,6 +127,7 @@ PlayerSettings:
   vulkanEnableSetSRGBWrite: 0
   vulkanEnablePreTransform: 0
   vulkanEnableLateAcquireNextImage: 0
+  vulkanEnableCommandBufferRecycling: 1
   m_SupportedAspectRatios:
     4:3: 1
     5:4: 1
@@ -132,9 +139,9 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 795709935841915251, guid: e200ae7a430f7a643958fcde59758fdd, type: 2}
-  - {fileID: -1954424671968958687, guid: 426f029ec971b8c4cb2733ab90e0461f, type: 2}
   - {fileID: 7391080279565968373, guid: 93f56b6687d9a4447bb1b2372f2649c4, type: 2}
+  - {fileID: -5903369265186673945, guid: e200ae7a430f7a643958fcde59758fdd, type: 2}
+  - {fileID: -8819081350817218757, guid: 426f029ec971b8c4cb2733ab90e0461f, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -242,6 +249,7 @@ PlayerSettings:
   useCustomGradlePropertiesTemplate: 0
   useCustomProguardFile: 0
   AndroidTargetArchitectures: 1
+  AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
@@ -258,6 +266,7 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
+  chromeosInputEmulation: 1
   AndroidMinifyWithR8: 0
   AndroidMinifyRelease: 0
   AndroidMinifyDebug: 0
@@ -352,6 +361,7 @@ PlayerSettings:
   cameraUsageDescription: 
   locationUsageDescription: 
   microphoneUsageDescription: 
+  bluetoothUsageDescription: 
   switchNMETAOverride: 
   switchNetLibKey: 
   switchSocketMemoryPoolSize: 6144
