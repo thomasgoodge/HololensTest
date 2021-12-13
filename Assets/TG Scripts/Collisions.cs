@@ -7,11 +7,13 @@ public class Collisions : MonoBehaviour
     [SerializeField] private AudioClip Blop;
     [SerializeField] private AudioClip Clink;
     [SerializeField] private string sphereType;
+    [SerializeField] ParticleSystem successParticles;
     private AudioSource audiosource;
 
     private void Start()
     {
         audiosource = GetComponent<AudioSource>();
+        successParticles.Stop();
     }
 
     void OnCollisionEnter(Collision collisionInfo)
@@ -28,7 +30,9 @@ public class Collisions : MonoBehaviour
         {
             ScoreManager.instance.AddPoint();
             AudioSource.PlayClipAtPoint(Blop, transform.position, 0.5f);
+            successParticles.Play();
             Destroy(this.gameObject);
+            
             //Debug.Log("Hit!");
         }
 
@@ -44,6 +48,9 @@ public class Collisions : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+
+        
             
     }
 }

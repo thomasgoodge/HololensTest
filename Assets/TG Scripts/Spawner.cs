@@ -9,9 +9,9 @@ public class Spawner : MonoBehaviour
     public Vector3 size;
     public GameObject spherePrefab;
     //Create counters for time and number of spheres, as well as initialising a respawn time
-    public float respawnTime = 1.5f;
+    public float respawnRate = 1f;
+    public float respawnTime;
     private int sphereCount = 0;
-    public bool GameRunning = true;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         //Reset the respawn time to a random number within range 
-        respawnTime = Random.Range(1.0f, 2.5f);
+        respawnTime = Random.Range(respawnRate / 2, respawnRate * 2);
     }
 
     private IEnumerator SpawnSphere()
