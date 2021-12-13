@@ -8,5 +8,6 @@ public class ResetCube : MonoBehaviour
     public void resetCubePosition()
     {
         transform.position = new Vector3(0f,-0.048f,0.5f);
+        Debug.Log("Cube position reset");
     }
 }
