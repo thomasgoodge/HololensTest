@@ -399,7 +399,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 9119048788222830903, guid: 392592e37f1e513498ab7805b6efa0f3, type: 3}
         m_TargetAssemblyTypeName: ResetCube, Assembly-CSharp
         m_MethodName: resetCubePosition
         m_Mode: 1
