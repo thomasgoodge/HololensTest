@@ -8,8 +8,8 @@ public class ObjectMovement : MonoBehaviour
 {
     //Initiliase Variables that define the object movement
     [SerializeField] private float spawnSpeed = 1.0f;
-    [SerializeField] private float resetPosition = -1f;
-    private float spawnTime = 0.0f;
+    //[SerializeField] private float resetPosition = -1f;
+    //private float spawnTime = 0.0f;
     //Set the destination as slightly below the Player's viewpoint
     private Vector3 destination = new Vector3(0,-0.1f,-0.15f);
     private Vector3 leftDestination = new Vector3(0.5f, -0.1f, -0.15f);

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8034347644364368419}
   m_Layer: 0
   m_Name: Enemy Sphere
-  m_TagString: Enemy Sphere
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2805515609385831676}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03ce757245ecf8b44a63dc8388185ea8, type: 3}
   m_Name: 
@@ -145,6 +145,8 @@ MonoBehaviour:
   Blop: {fileID: 8300000, guid: c2c5886ca83d27a4f857814f98638bed, type: 3}
   Clink: {fileID: 8300000, guid: 9d4bbd061ff2a0148916d172082e273d, type: 3}
   sphereType: Enemy
+  targetParticles: {fileID: 0}
+  enemyParticles: {fileID: 0}
 --- !u!82 &8034347644364368419
 AudioSource:
   m_ObjectHideFlags: 0

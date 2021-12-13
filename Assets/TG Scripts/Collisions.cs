@@ -6,51 +6,46 @@ public class Collisions : MonoBehaviour
     [SerializeField] private AudioClip Pop;
     [SerializeField] private AudioClip Blop;
     [SerializeField] private AudioClip Clink;
-    [SerializeField] private string sphereType;
-    [SerializeField] ParticleSystem successParticles;
+    [SerializeField] ParticleSystem targetParticles;
+    [SerializeField] ParticleSystem enemyParticles;
+    [SerializeField] ParticleSystem hazardParticles;
     private AudioSource audiosource;
 
     private void Start()
     {
         audiosource = GetComponent<AudioSource>();
-        successParticles.Stop();
     }
 
-    void OnCollisionEnter(Collision collisionInfo)
+    void OnCollisionEnter(Collision collision)
     {
         //Register collisions depending on the tags for the objects.
         //Play audio clip for each type of sphere. (AtPoint instead of OneShot because there are multiple different types of audio clips to play)
-        if (collisionInfo.collider.tag == "Player" & sphereType == "Enemy")
+        if (collision.collider.tag == "Enemy")
         {
             ScoreManager.instance.SubtractPoint();
             AudioSource.PlayClipAtPoint(Pop, transform.position, 0.5f);
-            Destroy(this.gameObject);
+            enemyParticles.Play();
+            Destroy(collision.gameObject);
         }
-        else if (collisionInfo.collider.tag == "Player" & sphereType == "Target Sphere")
+        else if (collision.collider.tag == "Target Sphere")
         {
             ScoreManager.instance.AddPoint();
             AudioSource.PlayClipAtPoint(Blop, transform.position, 0.5f);
-            successParticles.Play();
-            Destroy(this.gameObject);
-            
+            targetParticles.Play();
+            Destroy(collision.gameObject);
             //Debug.Log("Hit!");
         }
 
-        else if (collisionInfo.collider.tag == "Player" & sphereType == "Hazard Sphere")
+        else if (collision.collider.tag ==  "Hazard Sphere")
         {
             ScoreManager.instance.HazardPoint();
             AudioSource.PlayClipAtPoint(Clink, transform.position, 0.5f);
-            Destroy(this.gameObject);
+            hazardParticles.Play();
+            Destroy(collision.gameObject);
             //Debug.Log("Hit!");
         }
         // If the object hits the Wall object, destroy it
-        else if (collisionInfo.collider.tag == "Wall")
-        {
-            Destroy(this.gameObject);
-        }
-
-
-        
+            
             
     }
 }

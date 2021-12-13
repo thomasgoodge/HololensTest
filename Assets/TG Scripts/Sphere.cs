@@ -7,9 +7,6 @@ public class Sphere : MonoBehaviour
     //Define the initial properties of the sphere, 
     public float speed = Random.Range(0.5f, 2.5f);
     private Rigidbody rb;
-    private float resetPosition = -1f;
-
-
     // Start is called before the first frame update
     void Start()
     {

@@ -7,8 +7,9 @@ TagManager:
   - UI
   - Sphere
   - Target Sphere
-  - Enemy Sphere
   - Wall
+  - Enemy
+  - Hazard Sphere
   layers:
   - Default
   - TransparentFX
