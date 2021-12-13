@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Hololens AR.unity
+    path: Assets/Scenes/MainMenu.unity
+    guid: 277955e3efec7d54391e746c7544b5e8
+  - enabled: 1
+    path: Assets/Scenes/Intermediate.unity
     guid: d70f3fcaf955a654abdcd237e4b4d9d0
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 93f56b6687d9a4447bb1b2372f2649c4, type: 2}

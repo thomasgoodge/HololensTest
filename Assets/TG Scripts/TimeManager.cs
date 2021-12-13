@@ -21,7 +21,7 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         timeKeeper += Time.deltaTime;
-        if (isRunning == true)
+            if (isRunning == true)
             timer.text = Time.time.ToString("#.00");
         //Debug.Log(timer.text);
     }
