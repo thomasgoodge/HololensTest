@@ -348,20 +348,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement:
-    m_Name: Movement
+    m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: a55274ab-99b6-4ef6-b934-66617df3d939
+    m_Id: 
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
-  controlSpeed: 5
-  xRange: 0.35
-  yRange: 0.2
+  controlSpeed: 0.8
+  xRange: 1.5
+  yRange: 1.5
   positionPitchFactor: 0
-  controlPitchFactor: -30
-  positionYawFactor: 30
-  controlRollFactor: -20
+  controlPitchFactor: -60
+  positionYawFactor: 60
+  controlRollFactor: -60
 --- !u!114 &1860011288055238125
 MonoBehaviour:
   m_ObjectHideFlags: 0
