@@ -678,6 +678,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194231}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -751,6 +752,29 @@ Transform:
   m_Father: {fileID: 696047388}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf98dd1206224111a38765365e98e207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockCursorWhenFocusLocked: 1
+  setCursorInvisibleWhenFocusLocked: 0
+  maxGazeCollisionDistance: 10
+  raycastLayerMasks:
+  - serializedVersion: 2
+    m_Bits: 4294967291
+  stabilizer:
+    storedStabilitySamples: 60
+  gazeTransform: {fileID: 0}
+  minHeadVelocityThreshold: 0.5
+  maxHeadVelocityThreshold: 2
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,6 +961,34 @@ PrefabInstance:
     - target: {fileID: 1773235876891905569, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: xRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: yRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: controlSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: movement.m_Id
+      value: 63e3752c-757f-441b-8ae0-90d0fa300ead
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: controlRollFactor
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: positionYawFactor
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: controlPitchFactor
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 6513306124745767581, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
       propertyPath: m_Name

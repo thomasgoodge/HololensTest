@@ -740,7 +740,7 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1283,6 +1283,34 @@ PrefabInstance:
     - target: {fileID: 1773235876891905569, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: xRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: yRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: controlSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: movement.m_Id
+      value: e2edb32b-b795-430c-a4f7-91d4c7ec1a1e
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: controlRollFactor
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: positionYawFactor
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: controlPitchFactor
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 6513306124745767581, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
       propertyPath: m_Name

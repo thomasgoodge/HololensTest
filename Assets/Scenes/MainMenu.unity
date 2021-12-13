@@ -285,6 +285,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: xRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: yRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: controlSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: movement.m_Id
+      value: 5e379a25-2233-447d-8bbc-b2d8f85822ac
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: movement.m_Name
+      value: Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: controlRollFactor
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: positionYawFactor
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860011288055238127, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
+      propertyPath: controlPitchFactor
+      value: -60
+      objectReference: {fileID: 0}
     - target: {fileID: 6513306124745767581, guid: 5037e701254617e4a9dda0b01d7e3c6d, type: 3}
       propertyPath: m_Name
       value: aircraft-A-A
