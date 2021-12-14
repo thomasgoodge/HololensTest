@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Oscillator : MonoBehaviour
+public class OscillateOnGaze : MonoBehaviour
 {
 
     Vector3 startingPostiion;
@@ -16,13 +16,6 @@ public class Oscillator : MonoBehaviour
         startingPostiion = transform.position;
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Oscillate();
-    }
-
     public void Oscillate()
     {
         if (period <= Mathf.Epsilon) { return; } //can't compare two floats - Epsilion is smallest possible unit in Unity to compare to

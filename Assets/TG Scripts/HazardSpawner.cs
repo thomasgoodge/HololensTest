@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class HazardSpawner : MonoBehaviour
@@ -9,7 +10,6 @@ public class HazardSpawner : MonoBehaviour
     public Vector3 size;
     public GameObject spherePrefab;
     // Create counters for time and number of spheres, as well as initialising a respawn time
-    public float timeKeeper = 0.0f;
     private float hazardRespawnTime = 1.0f;
     private int sphereCount = 0;
     public bool hazard;
@@ -17,17 +17,18 @@ public class HazardSpawner : MonoBehaviour
     private bool hazardOneSpawned;
     private bool hazardTwoSpawned;
     private bool hazardThreeSpawned;
+    public Stopwatch hazardTimeCounter = new Stopwatch();
     //public bool GameRunning = false;
 
     //Initialise Onsets and Offsets - Has to be set in the Unity Editor - High values are to stop CheckSpawn() comparing to 0
-    [SerializeField] private float hazardOneOnset = 1000000f;
-    [SerializeField] private float hazardOneOffset = 1000000f;
+    [SerializeField] private float hazardOneOnset;
+    [SerializeField] private float hazardOneOffset;
 
-    [SerializeField] private float hazardTwoOnset = 1000000f;
-    [SerializeField] private float hazardTwoOffset = 1000000f;
+    [SerializeField] private float hazardTwoOnset;
+    [SerializeField] private float hazardTwoOffset;
 
-    [SerializeField] private float hazardThreeOnset = 1000000f;
-    [SerializeField] private float hazardThreeOffset = 1000000f;
+    [SerializeField] private float hazardThreeOnset;
+    [SerializeField] private float hazardThreeOffset;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +38,7 @@ public class HazardSpawner : MonoBehaviour
         hazardOneSpawned = false;
         hazardTwoSpawned = false;
         hazardThreeSpawned = false;
-        //GameRunning = true;
+        hazardTimeCounter.Start();
 
         //Define Onsets and Offsets here
         /* hazardOneOnset = **;
@@ -57,7 +58,7 @@ public class HazardSpawner : MonoBehaviour
         // Reset the respawn time to a random number within range ( smaller range for hazard spheres to increase spawn rate)
        // if (GameRunning == true)
         //{
-            timeKeeper += Time.deltaTime;
+            
             CheckSpawn();
             CheckHazard();
         //}
@@ -67,38 +68,39 @@ public class HazardSpawner : MonoBehaviour
     {
         if (hazard == false)
         {
-            if (timeKeeper >= hazardOneOnset && timeKeeper <= hazardOneOffset)
+            if (hazardTimeCounter.ElapsedMilliseconds >= hazardOneOnset && hazardTimeCounter.ElapsedMilliseconds <= hazardOneOffset)
             {
                 hazard = true;
             }
-            if (timeKeeper >= hazardTwoOnset && timeKeeper <= hazardTwoOffset)
+            else if (hazardTimeCounter.ElapsedMilliseconds >= hazardTwoOnset && hazardTimeCounter.ElapsedMilliseconds <= hazardTwoOffset)
             {
                 hazard = true;
             }
-            if (timeKeeper >= hazardThreeOnset && timeKeeper <= hazardThreeOffset)
+            else if (hazardTimeCounter.ElapsedMilliseconds >= hazardThreeOnset && hazardTimeCounter.ElapsedMilliseconds <= hazardThreeOffset)
             {
                 hazard = true;
+            }
+            else
+            {
+                hazard = false;
             }
         }
         else if (hazard == true)
         {
-            if (timeKeeper >= hazardOneOffset && timeKeeper <= hazardTwoOnset)
+            if (hazardTimeCounter.ElapsedMilliseconds >= hazardOneOffset && hazardTimeCounter.ElapsedMilliseconds <= hazardTwoOnset)
             {
                 hazard = false;
             }
-            if (timeKeeper >= hazardTwoOffset && timeKeeper <= hazardThreeOnset)
+            else if (hazardTimeCounter.ElapsedMilliseconds >= hazardTwoOffset && hazardTimeCounter.ElapsedMilliseconds <= hazardThreeOnset)
             {
                 hazard = false;
             }
-            if (timeKeeper >= hazardThreeOffset)
+            else if (hazardTimeCounter.ElapsedMilliseconds >= hazardThreeOffset)
             {
                 hazard = false;
             }
         }
     }
-
-
-
     // Function to check whether the Spawner should be active or not, as well as time windows for when hazard spheres should spawn.
 
     //Currently hard coded but needs a more elegant solution!!//
@@ -108,7 +110,7 @@ public class HazardSpawner : MonoBehaviour
         {
             if (hazardOneSpawned == false)
             {
-                if (timeKeeper >= hazardOneOnset && timeKeeper <= hazardOneOffset)
+                if (hazardTimeCounter.ElapsedMilliseconds >= hazardOneOnset && hazardTimeCounter.ElapsedMilliseconds <= hazardOneOffset)
                 {
                     spawnerActive = true;
                     hazardStart();
@@ -117,7 +119,7 @@ public class HazardSpawner : MonoBehaviour
             }
             if (hazardTwoSpawned == false)
             {
-                if (timeKeeper >= hazardTwoOnset && timeKeeper <= hazardTwoOffset)
+                if (hazardTimeCounter.ElapsedMilliseconds >= hazardTwoOnset && hazardTimeCounter.ElapsedMilliseconds <= hazardTwoOffset)
                 {
                     spawnerActive = true;
                     hazardStart();
@@ -126,7 +128,7 @@ public class HazardSpawner : MonoBehaviour
             }
             if (hazardThreeSpawned == false)
             {
-                if (timeKeeper >= hazardThreeOnset && timeKeeper <= hazardThreeOffset)
+                if (hazardTimeCounter.ElapsedMilliseconds >= hazardThreeOnset && hazardTimeCounter.ElapsedMilliseconds <= hazardThreeOffset)
                 {
                     spawnerActive = true;
                     hazardStart();
@@ -136,17 +138,17 @@ public class HazardSpawner : MonoBehaviour
         }
         else if (spawnerActive == true)
         {
-            if (timeKeeper >= hazardOneOffset)
+            if (hazardTimeCounter.ElapsedMilliseconds >= hazardOneOffset)
             {
                 spawnerActive = false;
                 hazardStop();
             }
-            if (timeKeeper >= hazardTwoOffset)
+            if (hazardTimeCounter.ElapsedMilliseconds >= hazardTwoOffset)
             {
                 spawnerActive = false;
                 hazardStop();
             }
-            if (timeKeeper >= hazardThreeOffset)
+            if (hazardTimeCounter.ElapsedMilliseconds >= hazardThreeOffset)
             {
                 spawnerActive = false;
                 hazardStop();
@@ -163,7 +165,7 @@ public class HazardSpawner : MonoBehaviour
     {
         //Doesn't work with the StopCoroutine function
         //StopCoroutine(SpawnHazardSphere(spawnerActive));
-        StopAllCoroutines();
+        StopCoroutine(SpawnHazardSphere(spawnerActive));
     }
 
     // Create a Coroutine to create spheres within the spawn area
@@ -178,7 +180,7 @@ public class HazardSpawner : MonoBehaviour
             // Create an object with these properties
             GameObject alpha = Instantiate(spherePrefab, pos, Quaternion.identity);
             sphereCount++;
-            Debug.Log(spherePrefab.ToString() + " spawned: " + sphereCount);
+            // print(spherePrefab.ToString() + " spawned: " + sphereCount);
             // Wait for the amount of time within the respawn range
             yield return new WaitForSeconds(hazardRespawnTime);
         }

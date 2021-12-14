@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4130524280112701543}
   - component: {fileID: 8173113138912286238}
   - component: {fileID: 7545729418147267468}
+  - component: {fileID: 6892952441083917896}
   m_Layer: 0
   m_Name: Moving Sphere
   m_TagString: Target Sphere
@@ -112,7 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnSpeed: 1
-  resetPosition: -1
 --- !u!54 &4130524280112701543
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -144,9 +144,9 @@ MonoBehaviour:
   Pop: {fileID: 8300000, guid: 896aa138c68f1024bab95c5dfd2bdeaa, type: 3}
   Blop: {fileID: 8300000, guid: c2c5886ca83d27a4f857814f98638bed, type: 3}
   Clink: {fileID: 8300000, guid: 9d4bbd061ff2a0148916d172082e273d, type: 3}
-  sphereType: Target Sphere
   targetParticles: {fileID: 0}
   enemyParticles: {fileID: 0}
+  hazardParticles: {fileID: 0}
 --- !u!82 &7545729418147267468
 AudioSource:
   m_ObjectHideFlags: 0
@@ -243,3 +243,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6892952441083917896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130524280112701565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da76eb4d493d6b41bf5b9a2cd2c5771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 2000
