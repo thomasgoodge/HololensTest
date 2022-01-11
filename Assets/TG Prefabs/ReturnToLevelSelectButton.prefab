@@ -806,7 +806,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7884548100770728046, guid: 33345a6c0e7e1144a80effc66a27911d, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AdvanceScene, Assembly-CSharp
         m_MethodName: AdvanceLevel
         m_Mode: 5
@@ -1038,7 +1038,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

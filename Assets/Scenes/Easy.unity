@@ -399,41 +399,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8158623190136998571, guid: 180a9a3f044e4de499c9b09a754e8db8, type: 3}
-      propertyPath: TouchEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158623190136998571, guid: 180a9a3f044e4de499c9b09a754e8db8, type: 3}
-      propertyPath: TouchEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158623190136998571, guid: 180a9a3f044e4de499c9b09a754e8db8, type: 3}
       propertyPath: TouchEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 170085467}
     - target: {fileID: 8158623190136998571, guid: 180a9a3f044e4de499c9b09a754e8db8, type: 3}
-      propertyPath: TouchEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158623190136998571, guid: 180a9a3f044e4de499c9b09a754e8db8, type: 3}
-      propertyPath: TouchEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: resetCubePosition
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158623190136998571, guid: 180a9a3f044e4de499c9b09a754e8db8, type: 3}
       propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 170085467}
-    - target: {fileID: 8158623190136998571, guid: 180a9a3f044e4de499c9b09a754e8db8, type: 3}
-      propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: resetCubePosition
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158623190136998571, guid: 180a9a3f044e4de499c9b09a754e8db8, type: 3}
-      propertyPath: TouchEnd.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ResetCube, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8158623190136998571, guid: 180a9a3f044e4de499c9b09a754e8db8, type: 3}
-      propertyPath: TouchEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 8158623190136998573, guid: 180a9a3f044e4de499c9b09a754e8db8, type: 3}
       propertyPath: m_Name
       value: ResetCubeButton (1)
@@ -2006,7 +1978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8424967650312756666, guid: 297bc24aeab6d2a418178aeef4efed5a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25309375
+      value: 0.4191
       objectReference: {fileID: 0}
     - target: {fileID: 8424967650312756666, guid: 297bc24aeab6d2a418178aeef4efed5a, type: 3}
       propertyPath: m_LocalPosition.y

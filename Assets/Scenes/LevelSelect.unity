@@ -1232,7 +1232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514688113}
   m_LocalRotation: {x: -0, y: 0.28157306, z: -0, w: 0.95953983}
-  m_LocalPosition: {x: 0.17785047, y: -0.07, z: 0.3771264}
+  m_LocalPosition: {x: 0.17785047, y: -0.07, z: 0.4938819}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1052905286}
@@ -2109,7 +2109,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089274036104433315, guid: 99fb3d2e8658f644abc66994280bf31f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.514
+      value: 0.958
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089274036104433340, guid: 99fb3d2e8658f644abc66994280bf31f, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2089274036360559037, guid: 99fb3d2e8658f644abc66994280bf31f, type: 3}
       propertyPath: m_RootOrder
@@ -3153,6 +3157,63 @@ Transform:
   m_Father: {fileID: 514688121}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1053894280
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424522, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 641394363191424523, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
+      propertyPath: m_Name
+      value: EyeTracking
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cdf6dffd67e8434884b2c8fe85da3a5, type: 3}
 --- !u!1 &1080204547
 GameObject:
   m_ObjectHideFlags: 0
@@ -3546,34 +3607,10 @@ MonoBehaviour:
   enforceFrontPush: 1
   TouchBegin:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1080204552}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnHandPressTouched
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   TouchEnd:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1080204552}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnHandPressUntouched
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   ButtonPressed:
     m_PersistentCalls:
       m_Calls:
@@ -3639,7 +3676,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Easy
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
   movingButtonIconText: {fileID: 1751612537}
   compressableButtonVisuals: {fileID: 980561112}
   minCompressPercentage: 0.25
@@ -3666,7 +3703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080204547}
   m_LocalRotation: {x: -0, y: -0.36074278, z: -0, w: 0.93266535}
-  m_LocalPosition: {x: -0.17670994, y: -0.07, z: 0.3770501}
+  m_LocalPosition: {x: -0.17670994, y: -0.07, z: 0.49380562}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 2126270742}
@@ -4238,7 +4275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173403131}
   m_LocalRotation: {x: -0, y: 0.02363199, z: -0, w: 0.99972075}
-  m_LocalPosition: {x: 0.0041, y: -0.07, z: 0.37724447}
+  m_LocalPosition: {x: 0.0041, y: -0.07, z: 0.494}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 289659434}
