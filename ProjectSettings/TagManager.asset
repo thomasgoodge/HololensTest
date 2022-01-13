@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Enemy
   - Hazard Sphere
+  - Gem
   layers:
   - Default
   - TransparentFX

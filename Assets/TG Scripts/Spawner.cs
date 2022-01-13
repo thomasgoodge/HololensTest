@@ -7,7 +7,8 @@ public class Spawner : MonoBehaviour
     //Create containers for the dimensions of the Spawner cube
     public Vector3 centre;
     public Vector3 size;
-    public GameObject spherePrefab;
+    public Quaternion rotation;
+    public GameObject itemPrefab;
     //Create counters for time and number of spheres, as well as initialising a respawn time
     public float respawnRate = 1f;
     public float respawnTime;
@@ -18,7 +19,8 @@ public class Spawner : MonoBehaviour
     {
         //if (GameRunning == true)
         //{
-            StartCoroutine(SpawnSphere());
+
+            StartCoroutine(SpawnObject());
        //}
     }
 
@@ -29,18 +31,20 @@ public class Spawner : MonoBehaviour
         respawnTime = Random.Range(respawnRate / 2, respawnRate * 2);
     }
 
-    private IEnumerator SpawnSphere()
+    private IEnumerator SpawnObject()
     {
         // Coroutine will run forever whilst the game is running;
         while (true)
         {
+            yield return new WaitForSeconds(Random.Range(0, 1));
             // Create a new Vector 3 position that falls within the confines of the spawn area (Range is double the size of the spawn area, so need to halve it to maintain correct ratios)
             Vector3 pos = centre + new Vector3(Random.Range(-size.x / 2, size.x / 2), Random.Range(-size.y / 2, size.y / 2), Random.Range(-size.z / 2, size.z / 2));
+            
             //Debug.Log(pos);
             //Create an object with these properties
-            GameObject alpha = Instantiate(spherePrefab, pos, Quaternion.identity);
+            GameObject alpha = Instantiate(itemPrefab, pos, Quaternion.identity);
             sphereCount++;
-           // Debug.Log(spherePrefab.ToString() + " spawned: " + sphereCount);
+           // Debug.Log(itemPrefab.ToString() + " spawned: " + sphereCount);
             yield return new WaitForSeconds(respawnTime);
         }
     }

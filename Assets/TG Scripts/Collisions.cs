@@ -43,8 +43,9 @@ public class Collisions : MonoBehaviour
             hazardParticles.Play();
             Destroy(collision.gameObject);
             //Debug.Log("Hit!");
-        }
-        // If the object hits the Wall object, destroy it
+        }    
+
+       // If the object hits the Wall object, destroy it
             
             
     }
