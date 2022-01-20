@@ -170,7 +170,7 @@ MonoBehaviour:
   size: {x: 2, y: 0.5, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 0}
   itemPrefab: {fileID: 7927207392137251540, guid: 63345ca33c3902e438f3e2a6c2f2bc8c, type: 3}
-  respawnRate: 4
+  respawnRate: 3
   respawnTime: 0
 --- !u!1001 &60826562
 PrefabInstance:
@@ -999,7 +999,7 @@ MonoBehaviour:
   size: {x: 2, y: 0.5, z: 0}
   rotation: {x: 0, y: 0, z: 0, w: 0}
   itemPrefab: {fileID: 4489212933387002418, guid: ecf032514c17421488d6d0c5b328c428, type: 3}
-  respawnRate: 4
+  respawnRate: 3
   respawnTime: 0
 --- !u!1 &1869927971
 GameObject:
