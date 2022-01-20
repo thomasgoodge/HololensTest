@@ -1391,7 +1391,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7884548100770728047, guid: 33345a6c0e7e1144a80effc66a27911d, type: 3}
+      - m_Target: {fileID: 8411142723601204475, guid: 5420d8672df87074ea02954d49dc7384, type: 3}
         m_TargetAssemblyTypeName: QuitApplication, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
