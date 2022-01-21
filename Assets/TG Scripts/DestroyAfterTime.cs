@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class DestroyAfterTime : MonoBehaviour
 {
-    [SerializeField] float timeToDestroy;
+    [SerializeField] float timeToDestroy; //Parameter defining when the object should be destroyed in milliseconds
     public Stopwatch timeAlive = new Stopwatch();
-       // Start is called before the first frame update
-    // Update is called once per frame
+      
     void Start()
     {
+        //Create a timer from when the Game OBject is instantiated
         timeAlive.Start();
     }
   
@@ -19,6 +19,7 @@ public class DestroyAfterTime : MonoBehaviour
     {
         if (timeAlive.ElapsedMilliseconds>timeToDestroy)
      {
+        // Checks to see if the timeAlive stopwatch is greater than the timeToDestroy variable, and destroys object if so
          timeAlive.Stop();
         
          Destroy(this.gameObject);

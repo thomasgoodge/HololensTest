@@ -8,6 +8,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public Text scoreText;
     public int score = 0;
+    
+    //Defines a Text object to display as a Canvas, and the score container
 
     private void Awake()
     {
@@ -18,6 +20,8 @@ public class ScoreManager : MonoBehaviour
     {
         scoreText.text = "Score: " + score.ToString();
     }
+
+    //Functions which modify the score and then output the updated score to the canvas as a string
     public void AddPoint()
     {
         score += 1;

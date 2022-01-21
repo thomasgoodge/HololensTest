@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Oscillator : MonoBehaviour
 {
+    //Script to make an object move between two points defined in the Unity playspace
 
     Vector3 startingPostiion;
     [SerializeField] Vector3 movementVector;

@@ -8,6 +8,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking {
 
 public class DisplayGazeData : MonoBehaviour
     {
+        //Debugging script to tell if an object is being focused on in the Unity editor
         // Update is called once per frame
         void Update()
         {

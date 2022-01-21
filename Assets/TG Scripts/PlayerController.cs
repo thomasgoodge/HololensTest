@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    //Script used for the plane controller
     // Start is called before the first frame update
 
     //How to add key bindings for controller

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OscillateOnGaze : MonoBehaviour
 {
+    //Script that makes a Game Object Oscillate when it is focused on in the Hololens - not quite working correctly 
+
 
     Vector3 startingPostiion;
     [SerializeField] Vector3 movementVector;
