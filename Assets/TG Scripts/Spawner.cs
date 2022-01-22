@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         //if (GameRunning == true)
         //{
 
-            StartCoroutine(SpawnObject());
+            //StartCoroutine(SpawnObject());
        //}
     }
 
@@ -29,6 +29,11 @@ public class Spawner : MonoBehaviour
     {
         //Reset the respawn time to a random number within range 
         respawnTime = Random.Range(respawnRate / 2, respawnRate * 2);
+    }
+
+    public void StartSpawner()
+    {
+        StartCoroutine(SpawnObject());
     }
 
     private IEnumerator SpawnObject()
