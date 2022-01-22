@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 4476253133273621480}
   - component: {fileID: 4601109306065801438}
   - component: {fileID: 1258295950979924017}
-  - component: {fileID: 6910904046012089964}
   - component: {fileID: 6120348350184420509}
   - component: {fileID: 3409910843994355538}
   - component: {fileID: 3130339735828763074}
-  - component: {fileID: 1227574725725404691}
+  - component: {fileID: 8783302830303566511}
+  - component: {fileID: -5369094300814370866}
   m_Layer: 0
   m_Name: Penta
   m_TagString: Gem
@@ -125,18 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestroy: 2500
---- !u!114 &6910904046012089964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4489212933387002418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b01e0f8fa714f442867e88b9b09e7c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &6120348350184420509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -177,9 +165,9 @@ MonoBehaviour:
   whileLookingAtTarget:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3130339735828763074}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 8783302830303566511}
+        m_TargetAssemblyTypeName: SpawnParticles, Assembly-CSharp
+        m_MethodName: SpawnParticleSystem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -188,8 +176,8 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 6910904046012089964}
+        m_CallState: 2
+      - m_Target: {fileID: -5369094300814370866}
         m_TargetAssemblyTypeName: DestroyTarget, Assembly-CSharp
         m_MethodName: DestroyThisTarget
         m_Mode: 1
@@ -200,7 +188,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
   onLookAway:
     m_PersistentCalls:
       m_Calls: []
@@ -313,7 +301,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1227574725725404691
+--- !u!114 &8783302830303566511
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,8 +310,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4489212933387002418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61392eea723fd034981ce569f9e8f232, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a4b2661a1fb9b04194df1847f013063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  score: 0
+  leftExplosionParticles: {fileID: 4164994674942193377, guid: 0e281c4f7f09d5145885d99473351ce7, type: 3}
+  rightExplosionParticles: {fileID: 4164994674942193377, guid: 0e281c4f7f09d5145885d99473351ce7, type: 3}
+--- !u!114 &-5369094300814370866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4489212933387002418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b01e0f8fa714f442867e88b9b09e7c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
