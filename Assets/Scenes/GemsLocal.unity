@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -237,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5791870245062336302, guid: c8943c38b10fece4fbace4dfc9cbd565, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.168
+      value: 3.043
       objectReference: {fileID: 0}
     - target: {fileID: 5791870245062336302, guid: c8943c38b10fece4fbace4dfc9cbd565, type: 3}
       propertyPath: m_LocalRotation.w
@@ -824,6 +824,7 @@ Transform:
   m_Children:
   - {fileID: 1780873085}
   - {fileID: 1329050934}
+  - {fileID: 2770087434580450382}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1098,27 +1099,43 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1369320521}
     m_Modifications:
+    - target: {fileID: 2770087433488641938, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
+      propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1480047770}
+    - target: {fileID: 2770087433488641938, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
+      propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1148862512}
+    - target: {fileID: 2770087433488641938, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
+      propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: StartSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770087433488641938, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
+      propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: StartSpawner
+      objectReference: {fileID: 0}
     - target: {fileID: 2770087433488641940, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
       propertyPath: m_Name
       value: SpawnerStartButton
       objectReference: {fileID: 0}
     - target: {fileID: 2770087433488641964, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2770087433488641964, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.03296329
       objectReference: {fileID: 0}
     - target: {fileID: 2770087433488641964, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.067311
+      value: 0.87151045
       objectReference: {fileID: 0}
     - target: {fileID: 2770087433488641964, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: -1.1428691
       objectReference: {fileID: 0}
     - target: {fileID: 2770087433488641964, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1126,15 +1143,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2770087433488641964, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2770087433488641964, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2770087433488641964, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2770087433488641964, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1150,3 +1167,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
+--- !u!4 &2770087434580450382 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2770087433488641964, guid: 2df55d48e927cbb4b93099e9a7281b33, type: 3}
+  m_PrefabInstance: {fileID: 2770087434580450381}
+  m_PrefabAsset: {fileID: 0}
