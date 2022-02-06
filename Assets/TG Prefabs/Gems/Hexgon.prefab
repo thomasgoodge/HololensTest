@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: -523221997837805381}
   - component: {fileID: -8961333692692346566}
   - component: {fileID: 8317158915333386039}
-  - component: {fileID: -309356744647325217}
   - component: {fileID: -5491315255707968277}
   - component: {fileID: -6254447601982402922}
   m_Layer: 0
@@ -206,7 +205,7 @@ MonoBehaviour:
   onLookAway:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -309356744647325217}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
         m_MethodName: AddPoint
         m_Mode: 1
@@ -327,20 +326,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-309356744647325217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7927207392137251540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61392eea723fd034981ce569f9e8f232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  score: 0
 --- !u!114 &-5491315255707968277
 MonoBehaviour:
   m_ObjectHideFlags: 0
