@@ -12,7 +12,12 @@ public class Spawner : MonoBehaviour
     //Create counters for time and number of spheres, as well as initialising a respawn time
     public float respawnRate = 1f;
     public float respawnTime;
-    private int sphereCount = 0;
+
+    public int counter = 0;
+ 
+    public List<GameObject> ObjectList = new List<GameObject>();
+
+    public int ObjectListLength;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +34,9 @@ public class Spawner : MonoBehaviour
     {
         //Reset the respawn time to a random number within range 
         respawnTime = Random.Range(respawnRate / 2, respawnRate * 2);
+        ObjectListLength = ObjectList.Count;
+
+
     }
 
     public void StartSpawner()
@@ -48,11 +56,23 @@ public class Spawner : MonoBehaviour
             //Debug.Log(pos);
             //Create an object with these properties
             GameObject alpha = Instantiate(itemPrefab, pos, Quaternion.identity);
-            sphereCount++;
+
+            AddCounter();
+           
+            ObjectList.Add(alpha);
+
+            Debug.Log(counter);
+            
            // Debug.Log(itemPrefab.ToString() + " spawned: " + sphereCount);
             yield return new WaitForSeconds(respawnTime);
         }
     }
+
+    public void AddCounter()
+    {
+        counter ++;
+    }
+
 
     void OnDrawGizmosSelected()
     {

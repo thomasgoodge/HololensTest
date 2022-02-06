@@ -18,16 +18,22 @@ public class TimeManager : MonoBehaviour
 
     void Start()
     {
-        isRunning = true;
+        
     }
 
     void Update()
     {
         //Update timeKeeper with the deltaTime function and then output it as a string to the Canvas
-        timeKeeper += Time.deltaTime;
+        timeKeeper += Time.time;
             if (isRunning == true)
             timer.text = Time.time.ToString("#.00");
         //Debug.Log(timer.text);
     }
+
+    public void StartTimer()
+    {
+        isRunning = true;
+    }
+
 }
 

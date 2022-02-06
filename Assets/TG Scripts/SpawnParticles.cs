@@ -6,11 +6,16 @@ public class SpawnParticles : MonoBehaviour
 {
     [SerializeField] ParticleSystem leftExplosionParticles;
     [SerializeField] ParticleSystem rightExplosionParticles;
+    
+    [SerializeField] public int score = 0;
 
     Vector3 currentVectorPosition;
 
     Vector3 leftColumn = new Vector3(-1f, -0.25f, 3.158f);
     Vector3 rightColumn = new Vector3(1f, -0.25f, 3.158f);
+
+    public int Destroyed = 0;
+
 
  
     public void SpawnParticleSystem()
@@ -25,6 +30,10 @@ public class SpawnParticles : MonoBehaviour
         Instantiate(rightExplosionParticles);
         rightExplosionParticles.transform.position = rightColumn;
         //explosionParticles.Play();
+
+        Destroyed ++;
+        
+
         
     }
 }

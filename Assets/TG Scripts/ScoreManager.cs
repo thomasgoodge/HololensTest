@@ -7,7 +7,13 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
     public Text scoreText;
-    public int score = 0;
+    [SerializeField] public int score = 0;
+
+    [SerializeField] GameObject DiaSpawn;
+    [SerializeField] GameObject EmeSpawn;
+
+
+    
     
     //Defines a Text object to display as a Canvas, and the score container
 
@@ -20,6 +26,14 @@ public class ScoreManager : MonoBehaviour
     {
         scoreText.text = "Score: " + score.ToString();
     }
+
+
+    void Update()
+    {
+        score = DiaSpawn.GetComponent<Spawner>().ObjectListLength + EmeSpawn.GetComponent<Spawner>().ObjectListLength;
+        scoreText.text = "Score: " + score.ToString();
+    }
+
 
     //Functions which modify the score and then output the updated score to the canvas as a string
     public void AddPoint()
