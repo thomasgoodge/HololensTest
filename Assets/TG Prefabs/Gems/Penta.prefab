@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4483988426818297632}
   - component: {fileID: 4476253133273621480}
   - component: {fileID: 4601109306065801438}
+  - component: {fileID: 3409910843994355538}
   - component: {fileID: 1258295950979924017}
   - component: {fileID: 6120348350184420509}
-  - component: {fileID: 3409910843994355538}
   - component: {fileID: 3130339735828763074}
   - component: {fileID: 8783302830303566511}
   - component: {fileID: -5369094300814370866}
@@ -112,6 +112,97 @@ MonoBehaviour:
   endScale: {x: 1.5, y: 1.5, z: 1.5}
   scaleSpeed: 1
   scaleRate: 0.5
+--- !u!114 &3409910843994355538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4489212933387002418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e6657bab90ac149872e5361b42ea62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectAction:
+    id: 0
+    description: None
+    axisConstraint: 0
+  voiceSelect:
+  - id: 0
+    description: None
+    axisConstraint: 0
+  dwellTimeInSec: 0.8
+  onLookAtStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8783302830303566511}
+        m_TargetAssemblyTypeName: SpawnParticles, Assembly-CSharp
+        m_MethodName: SpawnParticleSystem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: -5369094300814370866}
+        m_TargetAssemblyTypeName: DestroyTarget, Assembly-CSharp
+        m_MethodName: DestroyThisTarget
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  whileLookingAtTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8783302830303566511}
+        m_TargetAssemblyTypeName: SpawnParticles, Assembly-CSharp
+        m_MethodName: SpawnParticleSystem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+      - m_Target: {fileID: -5369094300814370866}
+        m_TargetAssemblyTypeName: DestroyTarget, Assembly-CSharp
+        m_MethodName: DestroyThisTarget
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  onLookAway:
+    m_PersistentCalls:
+      m_Calls: []
+  onDwell:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  onTapDown:
+    m_PersistentCalls:
+      m_Calls: []
+  onTapUp:
+    m_PersistentCalls:
+      m_Calls: []
+  eyeCursorSnapToTargetCenter: 0
 --- !u!114 &1258295950979924017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,73 +229,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.3095818, y: 0.83314145, z: 2.1965427}
   m_Center: {x: 0.00000017881393, y: -0.00000043213367, z: 0.11594778}
---- !u!114 &3409910843994355538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4489212933387002418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1e6657bab90ac149872e5361b42ea62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectAction:
-    id: 1
-    description: Select
-    axisConstraint: 2
-  voiceSelect:
-  - id: 0
-    description: None
-    axisConstraint: 0
-  dwellTimeInSec: 0.8
-  onLookAtStart:
-    m_PersistentCalls:
-      m_Calls: []
-  whileLookingAtTarget:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8783302830303566511}
-        m_TargetAssemblyTypeName: SpawnParticles, Assembly-CSharp
-        m_MethodName: SpawnParticleSystem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: -5369094300814370866}
-        m_TargetAssemblyTypeName: DestroyTarget, Assembly-CSharp
-        m_MethodName: DestroyThisTarget
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onLookAway:
-    m_PersistentCalls:
-      m_Calls: []
-  onDwell:
-    m_PersistentCalls:
-      m_Calls: []
-  onSelected:
-    m_PersistentCalls:
-      m_Calls: []
-  onTapDown:
-    m_PersistentCalls:
-      m_Calls: []
-  onTapUp:
-    m_PersistentCalls:
-      m_Calls: []
-  eyeCursorSnapToTargetCenter: 0
 --- !u!82 &3130339735828763074
 AudioSource:
   m_ObjectHideFlags: 0

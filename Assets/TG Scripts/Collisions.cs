@@ -20,11 +20,8 @@ public class Collisions : MonoBehaviour
     {
         //Register collisions depending on the tags for the objects.
         //Play audio clip for each type of sphere. (AtPoint instead of OneShot because there are multiple different types of audio clips to play)
-        if (collision.collider.tag == "Enemy")
+        if (collision.collider.tag == "Player")
         {
-            ScoreManager.instance.SubtractPoint();
-            AudioSource.PlayClipAtPoint(Pop, transform.position, 0.5f);
-            enemyParticles.Play();
             Destroy(collision.gameObject);
         }
         else if (collision.collider.tag == "Target Sphere")
@@ -44,6 +41,14 @@ public class Collisions : MonoBehaviour
             Destroy(collision.gameObject);
             //Debug.Log("Hit!");
         }    
+        else if (collision.collider.tag == "Enemy")
+        {
+            ScoreManager.instance.AddPoint();
+            AudioSource.PlayClipAtPoint(Blop, transform.position, 0.5f);
+            targetParticles.Play();
+            Destroy(collision.gameObject);
+            //Debug.Log("Hit!");
+        }
 
        // If the object hits the Wall object, destroy it
             

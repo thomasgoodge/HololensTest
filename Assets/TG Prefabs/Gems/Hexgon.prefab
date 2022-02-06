@@ -119,7 +119,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7927207392137251540}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0da76eb4d493d6b41bf5b9a2cd2c5771, type: 3}
   m_Name: 
@@ -155,13 +155,25 @@ MonoBehaviour:
     description: Select
     axisConstraint: 2
   voiceSelect:
-  - id: 0
-    description: None
-    axisConstraint: 0
+  - id: 1
+    description: Select
+    axisConstraint: 2
   dwellTimeInSec: 0.8
   onLookAtStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -6254447601982402922}
+        m_TargetAssemblyTypeName: DestroyTarget, Assembly-CSharp
+        m_MethodName: DestroyThisTarget
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   whileLookingAtTarget:
     m_PersistentCalls:
       m_Calls:
