@@ -304,7 +304,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Say "Select"
+  m_text: Say "Return"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
@@ -664,6 +664,7 @@ GameObject:
   - component: {fileID: 8424967650312756657}
   - component: {fileID: -8870854526307542080}
   - component: {fileID: 8699485308581661060}
+  - component: {fileID: -1731578992736259940}
   m_Layer: 0
   m_Name: ReturnToLevelSelectButton
   m_TagString: Untagged
@@ -1214,8 +1215,32 @@ MonoBehaviour:
             m_StringArgument: LevelSelect
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: -1731578992736259940}
+          m_TargetAssemblyTypeName: DestroyTarget, Assembly-CSharp
+          m_MethodName: DestroyThisTarget
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   persistentKeywords: 1
   speechConfirmationTooltipPrefab: {fileID: 8046114618238072051, guid: 271778f6c957b524981067a81d238394, type: 3}
+--- !u!114 &-1731578992736259940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8424967650312756658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b01e0f8fa714f442867e88b9b09e7c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8424967650575993736
 GameObject:
   m_ObjectHideFlags: 0

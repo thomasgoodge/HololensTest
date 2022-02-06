@@ -55,7 +55,7 @@ namespace Microsoft.MixedReality.Toolkit.Input
             if (persistentKeywords)
             {
                 Debug.Assert(gameObject.transform.parent == null, "Persistent keyword GameObject must be at the root level of the scene hierarchy.");
-                DontDestroyOnLoad(gameObject);
+                //DontDestroyOnLoad(gameObject);
             }
 
             // Convert the struct array into a dictionary, with the keywords and the methods as the values.
