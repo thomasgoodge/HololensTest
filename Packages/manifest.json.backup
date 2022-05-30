@@ -41,13 +41,6 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "com.microsoft.mixedreality.wlt.asa": "file:MixedReality/com.microsoft.mixedreality.wlt.asa-1.5.8.tgz",
-    "com.microsoft.mixedreality.wlt.asa.samples": "file:MixedReality/com.microsoft.mixedreality.wlt.asa.samples-1.5.8.tgz",
-    "com.microsoft.mixedreality.worldlockingsamples": "file:MixedReality/com.microsoft.mixedreality.worldlockingsamples-1.5.8.tgz",
-    "com.microsoft.mixedreality.worldlockingtools": "file:MixedReality/com.microsoft.mixedreality.worldlockingtools-1.5.8.tgz",
-    "com.microsoft.azure.spatial-anchors-sdk.core": "file:MixedReality/com.microsoft.azure.spatial-anchors-sdk.core-2.11.0.tgz",
-    "com.microsoft.mixedreality.toolkit.foundation": "file:MixedReality/com.microsoft.mixedreality.toolkit.foundation-2.7.0.tgz",
-    "com.microsoft.mixedreality.toolkit.standardassets": "file:MixedReality/com.microsoft.mixedreality.toolkit.standardassets-2.7.0.tgz"
+    "com.unity.modules.xr": "1.0.0"
   }
 }
